@@ -1,0 +1,37 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */
+.suspense_loading {
+  height: 20px;
+  background-color: rgb(221, 219, 219);
+  width: 150px;
+  &.sm {
+    width: 150px;
+  }
+  &.md {
+    width: 250px;
+  }
+  &.lg {
+    width: 400px;
+  }
+  &.xl {
+    width: 600px;
+  }
+}
+
+.tooltip-container {
+  position: relative;
+  .tooltip {
+    border: 1px solid #e4e2e2;
+    border-radius: 4px;
+    z-index: 1000;
+    background: rgb(84, 83, 83);
+    color: white;
+    padding: 8px;
+    width: 300px;
+    position: absolute;
+    left: 140px;
+    top: 0px;
+  }
+}
