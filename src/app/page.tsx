@@ -55,10 +55,10 @@ async function Sessions() {
   const sessions = await getSessions()
 
   return (
-    <div className="container">
+    <div className="event_container">
       {sessions.map((session: Session) => {
         return (
-          <div className="event" key={session.id}>
+          <div className="event_list" key={session.id}>
             <div className="event_title"> {session.title} </div>
             <div className="event_description"> {session.description} </div>
             <ErrorBoundarySpeaker>

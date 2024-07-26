@@ -1,21 +1,28 @@
 $title-font-size: 16px;
+
 .event {
-  border: 2px solid rgb(237, 225, 225);
-  border-radius: 2px;
-  margin: 8px;
-  padding: 8px;
-  width: 100%;
-  max-width: 600px;
-  font-size: 13px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  &_container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  &_list {
+    border: 2px solid rgb(237, 225, 225);
+    border-radius: 2px;
+    padding: 12px;
+    max-width: 250px;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 
   &_title {
     font-size: $title-font-size;
     font-weight: bold;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
   &_description {
     margin-bottom: 8px;
+    min-height: 100px;
   }
   &_speaker {
     display: grid;
