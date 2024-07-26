@@ -1,0 +1,22 @@
+.speaker {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  &_details {
+    display: grid;
+    grid-template-columns: 140px auto;
+    min-height: 180px;
+    gap: 8px;
+    border: 2px solid rgb(237, 225, 225);
+    border-radius: 2px;
+    padding: 12px;
+  }
+  &_name {
+    font-size: 16px;
+    color: rgb(7, 192, 192);
+  }
+  &_description {
+    font-size: 13px;
+  }
+}

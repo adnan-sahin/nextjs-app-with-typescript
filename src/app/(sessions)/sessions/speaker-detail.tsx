@@ -1,26 +1,19 @@
 import { speakersData } from "@/app/common/speakers-data"
 import Image from "next/image"
-import ToolTipSpeaker from "@/app/ToolTipSpeaker"
-
-export interface Speaker {
-  id: string
-  first: string
-  last: string
-  sessionId: string
-  bio: string
-}
+import ToolTipSpeaker from "@/app/(sessions)/sessions/tooltip-speaker"
+import Link from "next/link"
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-async function getSpeaker(speakerId: string) {
-  await delay(200)
+async function getSpeaker(speakerId: string | undefined) {
+  await delay(1000)
   //   if (speakerId == "8367") {
   //     throw new Error("Errors in getSpeaker()")
   //   }
   return speakersData.find((p) => p.id === speakerId)
 }
 
-export default async function SpeakerDetail({ speakerId }: { speakerId: string }) {
+export default async function SpeakerDetail({ speakerId }: { speakerId: string | undefined }) {
   const speaker = await getSpeaker(speakerId)
 
   return (
@@ -35,11 +28,11 @@ export default async function SpeakerDetail({ speakerId }: { speakerId: string }
           />
         </div>
         <div className="event_speaker_name">
-          <a href="">
+          <Link href={`/speakers/${speaker?.id}`}>
             <div>
               {speaker?.first.toUpperCase()} {speaker?.last.toUpperCase()}
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </ToolTipSpeaker>

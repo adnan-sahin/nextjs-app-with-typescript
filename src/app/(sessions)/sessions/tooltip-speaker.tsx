@@ -1,5 +1,5 @@
 "use client"
-import { Speaker } from "@/app/speaker-detail"
+import { Speaker } from "@/app/common/app-interfaces"
 
 import { ReactNode, useState } from "react"
 

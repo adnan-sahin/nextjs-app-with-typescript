@@ -1,10 +1,28 @@
 $title-font-size: 16px;
 
 .event {
+  &_lines {
+    display: flex;
+    gap: 8px;
+    border: 1px solid rgb(231, 227, 227);
+    background-color: rgb(243, 241, 241);
+    border-radius: 4px;
+    height: 50px;
+    margin-bottom: 5px;
+    align-items: center;
+    padding: 4px;
+    &_speaker {
+      a {
+        color: rgb(7, 192, 192);
+      }
+    }
+  }
   &_container {
     display: flex;
     justify-content: center;
     gap: 8px;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   &_list {
     border: 2px solid rgb(237, 225, 225);
@@ -12,7 +30,6 @@ $title-font-size: 16px;
     padding: 12px;
     max-width: 250px;
     font-size: 13px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 
   &_title {
@@ -35,6 +52,27 @@ $title-font-size: 16px;
       a {
         color: rgb(7, 192, 192);
       }
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  justify-content: end;
+  &_item {
+    align-content: center;
+    border: 1px solid rgb(212, 210, 210);
+    border-radius: 4px;
+    background-color: rgb(7, 192, 192, 0.6);
+    height: 32px;
+    padding: 4px;
+    a {
+      text-decoration: none;
+    }
+    &.active {
+      background-color: red;
     }
   }
 }

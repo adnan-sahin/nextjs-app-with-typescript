@@ -2,11 +2,56 @@
 @tailwind components;
 @tailwind utilities;
  */
+$bg-color: #e4e2e2;
+.nav {
+  display: flex;
+  gap: 8px;
+  border: 1px solid $bg-color;
+  background-color: $bg-color;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-radius: 4px;
+  align-items: center;
+  height: 50px;
+  a {
+    text-decoration: none;
+  }
+  &_link {
+    font-size: 16px;
+    align-content: center;
+    height: 30px;
+    padding: 2px;
+  }
+  &_link:not(.logo) {
+    border: 1px solid rgb(197, 194, 194);
+    border-radius: 4px;
+    background-color: rgb(7, 192, 192, 0.5);
+    color: #000;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  width: calc(100% - 15px);
+  background-color: $bg-color;
+
+  &_inner {
+    height: 30px;
+    padding: 4px;
+    align-content: center;
+  }
+}
 
 .suspense_loading {
-  height: 20px;
+  height: 25px;
   background-color: rgb(221, 219, 219);
   width: 150px;
+  &.xs {
+    width: 100px;
+  }
   &.sm {
     width: 150px;
   }
@@ -33,6 +78,5 @@
     width: 300px;
     position: absolute;
     left: 140px;
-    top: 0px;
   }
 }
